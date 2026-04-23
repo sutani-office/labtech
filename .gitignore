@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+frontend/node_modules/
+backend/venv/
+backend/__pycache__/
+*.pyc
+
+# Production
+dist/
+frontend/dist/
+
+# Misc
+.DS_Store
+frontend.zip
+*.log
+.env
+*.local
