@@ -1,13 +1,15 @@
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import { ArrowRight } from 'lucide-react'
 
 export default function SolutionsSection() {
+  const { t } = useTranslation()
   return (
     <section className="py-24 bg-[var(--bg-primary)] transition-colors duration-300">
       <div className="max-w-[1400px] mx-auto px-6">
         <div className="text-center mb-20">
           <h2 className="text-[48px] font-bold text-[var(--text-primary)] tracking-tight">
-            Solutions
+            {t('solutions.title')}
           </h2>
         </div>
 
@@ -21,7 +23,7 @@ export default function SolutionsSection() {
             data-aos="fade-up" data-aos-delay="100"
           >
             <div className="p-8 sm:w-[50%] relative z-10 flex flex-col justify-center">
-              <h3 className="text-[var(--text-primary)] font-medium text-[17px] mb-3">Site Selection</h3>
+              <h3 className="text-[var(--text-primary)] font-medium text-[17px] mb-3">{t('solutions.items.site')}</h3>
               <p className="text-[var(--text-secondary)] text-[13px] leading-[1.6]">
                 Site selection is choosing the best locations for businesses or facilities based on factors like accessibility, demographics, and competition.
               </p>
@@ -39,7 +41,7 @@ export default function SolutionsSection() {
             data-aos="fade-up" data-aos-delay="200"
           >
             <div className="p-8 sm:w-[50%] relative z-10 flex flex-col justify-center">
-              <h3 className="text-[var(--text-primary)] font-medium text-[17px] mb-3">Asset Management</h3>
+              <h3 className="text-[var(--text-primary)] font-medium text-[17px] mb-3">{t('solutions.items.asset')}</h3>
               <p className="text-[var(--text-secondary)] text-[13px] leading-[1.6]">
                 Centralizing property and asset data to create a unified system, while also improving asset operations for better management and performance.
               </p>

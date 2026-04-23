@@ -1,16 +1,21 @@
-const stats = [
-  { value: '5+', label: 'Years of Experience' },
-  { value: '50+', label: 'Projects Completed' },
-  { value: '20+', label: 'Cities Served' },
-  { value: '20+', label: 'Expert Team' },
+import { useTranslation } from 'react-i18next'
+
+const stats = (t) => [
+  { value: '5+', label: t('stats.exp') },
+  { value: '50+', label: t('stats.projects') },
+  { value: '20+', label: t('stats.cities') },
+  { value: '20+', label: t('stats.team') },
 ]
 
 export default function StatsSection() {
+  const { t } = useTranslation()
+  const statsList = stats(t)
+
   return (
     <section className="section-xs border-y border-[var(--border-color)] bg-[var(--bg-primary)] transition-colors duration-300">
       <div className="container">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-0 md:divide-x md:divide-[var(--border-color)]">
-          {stats.map((s) => (
+          {statsList.map((s) => (
             <div key={s.label} className="flex flex-col items-center text-center py-8 px-6">
               <div
                 className="text-[48px] font-bold text-[var(--text-primary)] mb-3"
